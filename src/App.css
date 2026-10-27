@@ -2,7 +2,7 @@
   --text: hwb(0 100% 0%);
   --text-hover: lch(73.95% 3.09 347.88);
   --background: lch(57.32% 74.55 28.41);
-  --background-hover: lch(64.6% 61.1 139.65);
+  --background-hover: oklab(42.138999999999996% 0.14604 0.07877);
 }
 
 /* Add this at the very top of your CSS file */
@@ -38,4 +38,19 @@ body {
 .ohje {
     font-size: 1.5rem; /* Adjust as needed */
     margin-top: 20px; /* Adds some space above the instruction text */
+}
+
+.esittelyteksti button {
+    font-size: 2rem; /* Adjust as needed */
+    padding: 10px 20px; /* Adjust as needed */
+    cursor: pointer;
+    background-color: var(--text);
+    color: var(--background);
+    border: 2px solid black;
+    border-radius: 5px; /* Optional: adds rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    &:hover {
+        background-color: var(--text-hover);
+        color: var(--background-hover);
+    }
 }
