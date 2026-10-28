@@ -1,0 +1,35 @@
+.answerbox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px; /* Adjust as needed */
+  background-color: var(--answerbox-background);
+  color: var(--answerbox-text);
+  height: 50px;
+  width: 100px;
+}
+
+.answerbox input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 50%;
+  text-align: center;
+}
+
+.submit-button {
+  background-color: var(--submit-button-background);
+  color: var(--submit-button-text);
+  border: none;
+  height: 50%;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  &:hover {
+    background-color: var(--text-hover);
+    color: var(--background-hover);
+  }
+}

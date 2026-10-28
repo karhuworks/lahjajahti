@@ -1,4 +1,4 @@
-import { gameText } from "../text";
+import { gameText } from "../assets/text";
 
 export function LandingPage({ onStart }: { onStart: () => void }) {
     return (

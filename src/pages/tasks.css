@@ -1,0 +1,6 @@
+#task1 {
+    background-color: var(--answerbox-background);
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}

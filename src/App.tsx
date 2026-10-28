@@ -1,7 +1,10 @@
 import './App.css'
+import './assets/colors.css'
 import { useState } from 'react'
-import type { State } from './tyypit.ts'
+import type { State } from './assets/tyypit.ts'
 import { LandingPage } from './pages/landingpage.tsx'
+import { Intro } from './pages/intro.tsx';
+import { Grid } from './pages/grid.tsx';
 
 function App() {
   const [state, setState] = useState<State>("landingpage");
@@ -12,8 +15,12 @@ function App() {
     );
   } else if (state === "intro") {
     return (
-      <div className="intro">
-      </div>
+      <Intro onStart={() => setState("grid")} />
+    );
+  }
+  else if (state === "grid") {
+    return (
+      <Grid />
     );
   }
 }
