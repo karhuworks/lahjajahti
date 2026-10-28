@@ -1,6 +1,6 @@
 .grid {
     background-color: black;
-    background-image: url('/finaltask.webp');
+    background-image: url('/finaltask.jpg');
     background-size: cover;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
