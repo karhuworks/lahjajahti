@@ -1,18 +1,19 @@
 import './grid.css';
-import { task1, task2, task3, task4, task5, task6, task7, task8, task9 } from './tasks';
+import { Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8, Task9 } from './tasks';
 
 export function Grid() {
+
     return (
         <div className="grid">
-            <div className="box">{task1()}</div>
-            <div className="box">{task2()}</div>
-            <div className="box">{task3()}</div>
-            <div className="box">{task4()}</div>
-            <div className="box">{task5()}</div>
-            <div className="box">{task6()}</div>
-            <div className="box">{task7()}</div>
-            <div className="box">{task8()}</div>
-            <div className="box">{task9()}</div>
+            <div className="box">{Task1()}</div>
+            <div className="box">{Task2()}</div>
+            <div className="box">{Task3()}</div>
+            <div className="box">{Task4()}</div>
+            <div className="box">{Task5()}</div>
+            <div className="box">{Task6()}</div>
+            <div className="box">{Task7()}</div>
+            <div className="box">{Task8()}</div>
+            <div className="box">{Task9()}</div>
         </div>
     );
 }

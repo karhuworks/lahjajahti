@@ -1,6 +1,13 @@
-#task1 {
-    background-color: var(--answerbox-background);
+
+.task {
+    background-color: var(--task-background);
     height: 100%;
     width: 100%;
+    border: 2px solid black;
     padding: 5px;
+}
+
+.solved {
+    background-color: none;
+    border: none;
 }

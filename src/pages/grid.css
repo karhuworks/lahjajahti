@@ -1,13 +1,11 @@
 .grid {
     background-color: black;
+    background-image: url('/finaltask.webp');
+    background-size: cover;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 100vh; /* Full viewport height */
     gap: 2px;
     width: 100vw; /* Full viewport width */
-}
-
-.box {
-    background-color: var(--background);
 }
