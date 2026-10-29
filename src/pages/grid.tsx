@@ -1,19 +1,37 @@
+import { useState } from 'react';
 import './grid.css';
 import { Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8, Task9 } from './tasks';
 
-export function Grid() {
+export function Grid( { onFinish }: { onFinish: () => void } ) {
 
-    return (
-        <div className="grid">
-            <div className="box">{Task1()}</div>
-            <div className="box">{Task2()}</div>
-            <div className="box">{Task3()}</div>
-            <div className="box">{Task4()}</div>
-            <div className="box">{Task5()}</div>
-            <div className="box">{Task6()}</div>
-            <div className="box">{Task7()}</div>
-            <div className="box">{Task8()}</div>
-            <div className="box">{Task9()}</div>
-        </div>
-    );
+    const [solvedCount, setSolvedCount] = useState(0);
+
+    const handleTaskSolved = () => {
+        setSolvedCount(prev => prev + 1);
+    };
+
+    if (solvedCount < 9) {
+        return (
+            <div className="grid">
+                <div className="box"><Task1 onSolve={handleTaskSolved} /></div>   
+                <div className="box"><Task2 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task3 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task4 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task5 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task6 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task7 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task8 onSolve={handleTaskSolved} /></div>
+                <div className="box"><Task9 onSolve={handleTaskSolved} /></div>
+                <button className="skip-button" onClick={() => setSolvedCount(9)}>Skip to final task</button>
+            </div>
+        );
+    } else {
+        return (
+            <div className="finaltask">
+                <h1>Here comes the final task!</h1>
+                <button className="finaltask-button" onClick={onFinish}>Done</button>
+            </div>
+        );
+    }
+
 }

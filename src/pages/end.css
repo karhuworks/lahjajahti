@@ -1,0 +1,11 @@
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    background-color: var(--background);
+    color: var(--text);
+}

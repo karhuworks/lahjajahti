@@ -5,6 +5,7 @@ import type { State } from './assets/tyypit.ts'
 import { LandingPage } from './pages/landingpage.tsx'
 import { Intro } from './pages/intro.tsx';
 import { Grid } from './pages/grid.tsx';
+import { End } from './pages/end.tsx';
 
 function App() {
   const [state, setState] = useState<State>("landingpage");
@@ -20,7 +21,12 @@ function App() {
   }
   else if (state === "grid") {
     return (
-      <Grid />
+      <Grid onFinish={() => setState("end")} />
+    );
+  }
+  else if (state === "end") {
+    return (
+      <End />
     );
   }
 }

@@ -1,9 +1,4 @@
-:root {
-  --text: hwb(0 100% 0%);
-  --text-hover: lch(73.95% 3.09 347.88);
-  --background: lch(57.32% 74.55 28.41);
-  --background-hover: oklab(42.138999999999996% 0.14604 0.07877);
-}
+
 
 /* Add this at the very top of your CSS file */
 * {
@@ -14,7 +9,9 @@
 
 body {
   background-color: var(--background); /* Ensures the background covers the whole screen */
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Optional: sets a default font */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Optional: sets a default font */;
+  background-image: url('/finaltask.jpg');
+  background-size: cover;
 }
 
 
