@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import './components.css';
+import { vinkit } from './text';
 
-export function AnswerBox({ onSubmit }: { onSubmit: (answer: string) => void }) {
+export function AnswerBox( { correctanswer, onSuccess}: { correctanswer: string, onSuccess: () => void } ) {
     const [input, setInput] = useState('');
 
     const handleFormSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault(); // Prevents page reload on enter/submit
-        if (onSubmit) {
-            onSubmit(input);
+        const iscorrect = CheckAnswer(input, correctanswer);
+        if (iscorrect) {
+            onSuccess();
         }
     };
 
@@ -28,4 +30,38 @@ export function AnswerBox({ onSubmit }: { onSubmit: (answer: string) => void }) 
 
 export function CheckAnswer(userAnswer: string, correctAnswer: string): boolean {
     return userAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
+}
+
+export function GiveTip() {
+    const [showTip, setShowTip] = useState(false);
+    const [tipCount, setTipCount] = useState(0);
+
+    const countTips = () => {
+        setTipCount(prevCount => prevCount + 1);
+    }
+
+    const handleTipClick = () => {
+        setShowTip(true);
+        if (tipCount >= vinkit.length - 1) {
+            setTipCount(vinkit.length - 1); // Reset to the first tip if all tips have been shown
+        }
+    }
+
+    const handleCloseTip = () => {
+        setShowTip(false);
+        countTips();
+    }
+
+    if (showTip) {
+        return (
+            <div className="tip-popup">
+                <p>{vinkit[tipCount].text}</p>
+                <button className="close-tip-button" onClick={handleCloseTip}>Sulje</button>
+            </div>
+        );
+    } else {
+        return (
+            <button className="tip-button" onClick={handleTipClick}>💡</button>
+        );
+    }
 }

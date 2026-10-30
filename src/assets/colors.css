@@ -8,4 +8,8 @@
   --submit-button-background: rgb(243, 227, 194);
   --submit-button-text: lab(40.36% 63.68 50.6);
   --task-background: oklab(86.213% -0.0025 0.09721);
+  --tip-background: oklch(47.292% 0.15403 38.022);
+  --tip-text: hwb(0 100% 0%);
+  --tip-button-background: oklab(59.641999999999996% -0.00012 0.00458);
+  --tip-button-text: hwb(0 100% 0%);
 }

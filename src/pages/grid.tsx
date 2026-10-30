@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './grid.css';
 import { Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8, Task9 } from './tasks';
+import { GiveTip } from '../assets/components';
 
 export function Grid( { onFinish }: { onFinish: () => void } ) {
 
@@ -23,6 +24,7 @@ export function Grid( { onFinish }: { onFinish: () => void } ) {
                 <div className="box"><Task8 onSolve={handleTaskSolved} /></div>
                 <div className="box"><Task9 onSolve={handleTaskSolved} /></div>
                 <button className="skip-button" onClick={() => setSolvedCount(9)}>Skip to final task</button>
+                <div><GiveTip/></div>
             </div>
         );
     } else {

@@ -58,3 +58,22 @@ export const tasktexts = [
         answer: "9",
     },
 ];
+
+export const vinkit = [
+    {
+        id: "vinkki1",
+        text: "Löydät vinkin pihlajasta."
+    },
+    {
+        id: "vinkki2",
+        text: "Tämä on toinen vinkki!"
+    },
+    {
+        id: "vinkki3",
+        text: "Tämä on kolmas vinkki!"
+    },
+    {
+        id: "viimeinenvinkki",
+        text: "Vinkkejä ei ole enää saatavilla."
+    }
+];
