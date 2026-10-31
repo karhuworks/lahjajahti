@@ -21,16 +21,6 @@
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
-.finaltask {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100vw;
-    background-position: center;
-}
-
 .zoomed {
     height: 100vh;
     width: 100vw;

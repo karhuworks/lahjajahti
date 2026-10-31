@@ -17,3 +17,36 @@
     background-color: none;
     border: none;
 }
+
+.finaltask-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.finaltask-button {
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+.finaltask-container img {
+    width: auto;        /* Forces the image to fill the container width */
+    height: 100vh;       /* 👈 This is the magic part! It keeps the proportions correct so the image never stretches or gets squished */
+    display: block;     /* Removes weird bottom gaps inline images sometimes get */
+    justify-self: center;
+}
+
+.clue {
+    position: absolute;
+    border: 2px solid black;
+    padding: 2px;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+#clue1 {
+    top: 50%;
+    left: 50%;
+}

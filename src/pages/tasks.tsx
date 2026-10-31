@@ -1,6 +1,6 @@
 
 import { AnswerBox } from "../assets/components.tsx";
-import { tasktexts } from "../assets/text.ts";
+import { tasktexts, finaltasktexts } from "../assets/text.ts";
 import './tasks.css';
 
 interface TaskProps {
@@ -159,4 +159,21 @@ export function Task9({ solved, onSolve }: TaskProps) {
     } else {
         return <div className="solved"></div>;
     }
+}
+
+export function FinalTask({onSolve}: {onSolve: () => void}) {
+    return (
+        <div className="finaltask-container">
+            <div className="clue" id="clue0">{finaltasktexts[0]}</div>
+            <div className="clue" id="clue1">{finaltasktexts[1]}</div>
+            <div className="clue" id="clue2">{finaltasktexts[2]}</div>
+            <div className="clue" id="clue3">{finaltasktexts[3]}</div>
+            <div className="clue" id="clue4">{finaltasktexts[4]}</div>
+            <div className="clue" id="clue5">{finaltasktexts[5]}</div>
+            <div className="clue" id="clue6">{finaltasktexts[6]}</div>
+            <div className="clue" id="clue7">{finaltasktexts[7]}</div>
+            <div className="clue" id="clue8">{finaltasktexts[8]}</div>
+            <button className="finaltask-button" onClick={onSolve}>Skip</button>
+        </div>
+    )
 }

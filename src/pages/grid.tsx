@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './grid.css';
-import { Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8, Task9 } from './tasks';
+import { FinalTask, Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8, Task9 } from './tasks';
 import { GiveTip } from '../assets/components';
 
 export function Grid({ onFinish }: { onFinish: () => void }) {
@@ -30,10 +30,7 @@ export function Grid({ onFinish }: { onFinish: () => void }) {
     // 1. Final Task Screen
     if (solvedCount >= 9) {
         return (
-            <div className="finaltask">
-                <h1>Here comes the final task!</h1>
-                <button className="finaltask-button" onClick={onFinish}>Done</button>
-            </div>
+            <FinalTask onSolve={onFinish}/>
         );
     }
 

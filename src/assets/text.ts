@@ -77,3 +77,5 @@ export const vinkit = [
         text: "Vinkkejä ei ole enää saatavilla."
     }
 ];
+
+export const finaltasktexts = ["0 = K", "1 = P", "2 = A", "3 = I", "4 = N", "6 = T", "7 = R", "8 = H", "9 = E"];
